@@ -62,6 +62,10 @@
 		<br>
         <input type="button" value="Save" onclick="save();" />
         <input type="button" value="Clear" onclick="clearz();" />
+
+	    <br>
+	    <button id="installApp">Install to device</button>
+	    
     </div>
         <script>
             window.onload= function(){
@@ -101,7 +105,23 @@
 			}
             clearz = function(){
 			  localStorage.clear();
-			}			
+			}
+
+	let deferredPrompt;
+	    window.addEventListener('beforeinstallprompt', (e) => {
+	        deferredPrompt = e;
+	    });
+	
+	    const installApp = document.getElementById('installApp');
+	    installApp.addEventListener('click', async () => {
+	        if (deferredPrompt !== null) {
+	            deferredPrompt.prompt();
+	            const { outcome } = await deferredPrompt.userChoice;
+	            if (outcome === 'accepted') {
+	                deferredPrompt = null;
+	            }
+	        }
+	    });
     </script>
 </body>
 </html>
