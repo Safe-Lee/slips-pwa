@@ -5,6 +5,24 @@
     <meta name="description" content="Slips Checklist PWA">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slips Checklist PWA</title>
+	<style>
+		body {
+		  background-color: linen;
+		}
+
+		h1 {
+		  color: maroon;
+		  margin-left: 20px;
+		}
+		input {
+			margin-left: 20px;
+		}
+		input, label {
+			margin-left: 20px;
+		}
+		</style>
+
+    
     <!-- add Manifest descriptor -->
     <link rel="manifest" href="./pwa.json">
 
@@ -24,31 +42,66 @@
                 } else console.log(`SW is already registered.`);
             });
         }
-
-        function saveState(){
-            var checkbox = document.getElementById("checkbox1");
-            localStorage.setItem("checkbox1", checkbox.checked);
-            alert("T");
-        }
-
-        function load(){    
-            var checked = JSON.parse(localStorage.getItem("checkbox1"));
-            document.getElementById("checkbox1").checked = checked;
-        }
-
-        function deleteState(){
-            location.reload();
-            localStorage.clear()
-        }
-
-        load();
+ 
         
     </script>
 </head>
 <body>
-<div style="text-align: center">Checklist PWA</div>
-    <input type="button" id="btnSave" value="Save" onclick="saveState()"/>
-    <input type="button" id="btnDelete" value="Delete" onclick="deleteState()"/>
-    <input type="checkbox" id="checkbox1">First checkbox</input>
+	<h1>Slips Checklist</h1>
+    <div>
+		<label for="fname">Your name:</label>
+		<input type="text" id="fname" name="fname"><br><br>	
+		
+        <input type="checkbox" id="checkbox-1" name="checkbox-1" />
+		<label for="checkbox-1">Hazard 1</label><br>		
+        <input type="checkbox" id="checkbox-2" name="checkbox-2" />
+		<label for="checkbox-1">Hazard 2</label><br>	
+        <input type="checkbox" id="checkbox-3" name="checkbox-3" />
+		<label for="checkbox-1">Hazard 3</label><br>			
+
+		<br>
+        <input type="button" value="Save" onclick="save();" />
+        <input type="button" value="Clear" onclick="clearz();" />
+    </div>
+        <script>
+            window.onload= function(){
+                    var listOfCheckboxes = document.querySelectorAll(`[type*="checkbox"]`);
+                    listOfCheckboxes.forEach( el => {
+                        var checked = JSON.parse(localStorage.getItem(el.id));
+                        document.getElementById(el.id).checked = checked;
+						
+						
+						el.addEventListener('change', (event) => {
+							localStorage.setItem(el.id, el.checked);
+							console.log(el.id,el.checked);						
+							//alert('c changed');
+						})
+                    });
+                    var listOfInputs = document.querySelectorAll(`[type*="text"]`);
+                    listOfInputs.forEach( el => {
+                        var valor = localStorage.getItem(el.id);
+                        document.getElementById(el.id).value = valor;
+				 
+						
+						el.addEventListener('input', (event) => {
+							localStorage.setItem(el.id, el.value);
+							console.log(el.id,el.value);						
+							//alert('i changed');
+						})
+					
+
+                    });					
+            }
+            save = function(){
+				var list = document.querySelectorAll(`[type*="checkbox"]`);
+				list.forEach( el => {
+					localStorage.setItem(el.id, el.checked);
+					console.log(el.id,el.checked);
+				})
+			}
+            clearz = function(){
+			  localStorage.clear();
+			}			
+    </script>
 </body>
 </html>
