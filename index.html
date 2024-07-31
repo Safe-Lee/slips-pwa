@@ -26,12 +26,12 @@
         }
 
         function saveState(){
-            var checkbox = document.getElementById('checkbox1');
-            localStorage.setItem('checkbox1', checkbox.checked);
+            var checkbox = document.getElementById("checkbox1");
+            localStorage.setItem("checkbox1", checkbox.checked);
         }
 
         function load(){    
-            var checked = JSON.parse(localStorage.getItem('checkbox1'));
+            var checked = JSON.parse(localStorage.getItem("checkbox1"));
             document.getElementById("checkbox1").checked = checked;
         }
 
