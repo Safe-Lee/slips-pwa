@@ -4,47 +4,27 @@
     <meta charset="UTF-8">
     <meta name="description" content="Slips Checklist PWA">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="./style.css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
     <title>Slips Checklist PWA</title>
-	<style>
-		body {
-		  background-color: linen;
-		}
-
-		h1 {
-		  color: maroon;
-		  margin-left: 20px;
-		}
-		input, button, label {
-			margin-left: 20px;
-		}
-		</style>
-
     
     <!-- add Manifest descriptor -->
     <link rel="manifest" href="./pwa.json">
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            // Register Service Worker on page load (if not registered before)
-            self.addEventListener('load', async () => {
-                const container = navigator.serviceWorker;
-                container.addEventListener(
-                    'controllerchange',
-                    () => console.log(`SW is changed (installed or removed).`)
-                );
-                if (container.controller === null) {
-                    console.log(`Register new SW for the app.`);
-                    await container.register('sw.js');
-                    console.log(`SW is registered.`);
-                } else console.log(`SW is already registered.`);
-            });
-        }
- 
-        
-    </script>
+	<script src="registerSW.js"></script>
 </head>
 <body>
-	<h1>Slips Checklist - PWA</h1>
+	<h1>Slips Checklist - PWA v3</h1>
     <div>
 		<label for="fname">Your name:</label>
 		<input type="text" id="fname" name="fname"><br><br>	
@@ -52,9 +32,9 @@
         <input type="checkbox" id="checkbox-1" name="checkbox-1" />
 		<label for="checkbox-1">Hazard 1</label><br>		
         <input type="checkbox" id="checkbox-2" name="checkbox-2" />
-		<label for="checkbox-1">Hazard 2</label><br>	
+		<label for="checkbox-2">Hazard 2</label><br>	
         <input type="checkbox" id="checkbox-3" name="checkbox-3" />
-		<label for="checkbox-1">Hazard 3</label><br>			
+		<label for="checkbox-3">Hazard 3</label><br>		
 
 		<br>
         <input type="button" value="Save" onclick="save();" />
@@ -64,61 +44,7 @@
 	    <button id="installApp">Install to device</button>
 	    
     </div>
-        <script>
-            window.onload= function(){
-                    var listOfCheckboxes = document.querySelectorAll(`[type*="checkbox"]`);
-                    listOfCheckboxes.forEach( el => {
-                        var checked = JSON.parse(localStorage.getItem(el.id));
-                        document.getElementById(el.id).checked = checked;
-						
-						
-						el.addEventListener('change', (event) => {
-							localStorage.setItem(el.id, el.checked);
-							console.log(el.id,el.checked);						
-							//alert('c changed');
-						})
-                    });
-                    var listOfInputs = document.querySelectorAll(`[type*="text"]`);
-                    listOfInputs.forEach( el => {
-                        var valor = localStorage.getItem(el.id);
-                        document.getElementById(el.id).value = valor;
-				 
-						
-						el.addEventListener('input', (event) => {
-							localStorage.setItem(el.id, el.value);
-							console.log(el.id,el.value);						
-							//alert('i changed');
-						})
-					
-
-                    });					
-            }
-            save = function(){
-				var list = document.querySelectorAll(`[type*="checkbox"]`);
-				list.forEach( el => {
-					localStorage.setItem(el.id, el.checked);
-					console.log(el.id,el.checked);
-				})
-			}
-            clearz = function(){
-			  localStorage.clear();
-			}
-
-	let deferredPrompt;
-	    window.addEventListener('beforeinstallprompt', (e) => {
-	        deferredPrompt = e;
-	    });
-	
-	    const installApp = document.getElementById('installApp');
-	    installApp.addEventListener('click', async () => {
-	        if (deferredPrompt !== null) {
-	            deferredPrompt.prompt();
-	            const { outcome } = await deferredPrompt.userChoice;
-	            if (outcome === 'accepted') {
-	                deferredPrompt = null;
-	            }
-	        }
-	    });
-    </script>
+		<script src="checklistLogic.js"></script>
+		<script src="installAppBTN.js"></script>
 </body>
 </html>

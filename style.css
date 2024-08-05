@@ -1,0 +1,10 @@
+body {
+  background-color: white;
+}
+h1 {
+  color: maroon;
+  margin-left: 20px;
+}
+input, button, label {
+	margin-left: 20px;
+}
