@@ -6,5 +6,34 @@ h1 {
   margin-left: 20px;
 }
 input, button, label {
-	margin-left: 20px;
+	/* margin-left: 20px; */
 }
+
+ul {
+	
+	margin-top:-1.75em;
+}
+
+/* table */ 
+/* tableWrap tableHeader1 tableHeader2 tableRow tableGroup tableRowIngroup */
+.tableMain  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tableMain td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tableMain th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tableMain {text-align:left;vertical-align:top;border-color:inherit;}
+.tableMain .suggestedAction { background:pink;display: none;line-height:2em;padding-left:5px;padding-right:10px;margin-top:10px;}
+.tableMain .suggestedAction:before { content: "❗️ "; }
+.tableMain .tableCheck{vertical-align:top;}
+.tableMain .tableHeader1{background-color:grey;}
+.tableMain .tableHeader2{background-color:lightgrey;}
+.tableMain .tableGroup{background-color:whitesmoke;}
+@media screen and (max-width: 767px) {
+	.tableMain {width: auto !important;}
+	.tableMain col {width: auto !important;}
+	.tableWrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}
+}
+
+
+
+

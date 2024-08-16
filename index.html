@@ -23,10 +23,12 @@
     
 </head>
 <body>
-	<h1>Slips Checklist - PWA v3.5</h1>
+	<h1>Slips Checklist - PWA v3.6</h1>
     <div>
-		<label for="fname">Your name:</label>
-		<input type="text" id="fname" name="fname"><br><br>	
+		<label for="TextYourname">Your name:</label>
+		<input type="text" id="TextYourname" name="TextYourname"><br><br>	
+		<label for="TextWorkplace">Workplace:</label>
+		<input type="text" id="TextWorkplace" name="TextWorkplace"><br><br>	
 		
         <input type="checkbox" id="checkbox-1" name="checkbox-1" />
 		<label for="checkbox-1">Hazard 1</label><br>		
@@ -36,11 +38,100 @@
 		<label for="checkbox-3">Hazard 3</label><br>		
 
 		<br>
-        <input type="button" value="Save" onclick="save();" />
+		<!--        <input type="button" value="Save" onclick="save();" />-->
         <input type="button" value="Clear" onclick="clearz();" />
 
 	    <br><br>
 	    <button id="installApp">Install to device</button>
+		
+
+		<div class="tableWrap">
+			<table class="tableMain">
+				<tbody>
+					<tr>
+						<th class="tableHeader1" colspan="2">Potential issue(s)</th>
+						<th class="tableHeader1">Yes?</th>
+					</tr>				
+					<tr>
+						<td class="tableHeader2" colspan="3">Outdoor areas</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud et
+							</div>
+							<div class="suggestedAction" id="suggestedAction1">
+								<ul>
+								  <li>Set up a regular work schedule for clearing paths, tackle bus routes first.</li>
+								  <li>Consider cutting back plants and trees that overlap paths.</li>
+								</ul>
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox1" name="checkbox1" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">Are paths prone to ice build-up during winter months?</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox2" name="checkbox2" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">Are there any changes in level on the path that are not easy to see, eg small slopes?</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox3" name="checkbox3" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableHeader2" colspan="3">Corridors and offices</td>
+					</tr>
+					<tr>
+						<td class="tableGroup" rowspan="2">Tiles/flooring</td>
+						<td class="tableCell">
+							<div class="potentialIssue">Are the tiles or flooring becoming unstuck or curling at the edges?</div>
+							<div class="suggestedAction" id="suggestedAction4">Maintenance required – fix down tiles and carpet edges, replace if necessary.</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox4" name="checkbox4" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell">Are there holes?</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox5" name="checkbox5" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">Is the anti-slip fl oor coating or grip tape worn smooth or damaged?</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox6" name="checkbox6" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableGroup" rowspan="2">Lighting</td>
+						<td class="tableCell">Are light levels too low to see the floor surface clearly?</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox7" name="checkbox7" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell">Is light reflecting on the smooth flooring creating glare?</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox8" name="checkbox8" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">Some other thing?</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox9" name="checkbox9" />
+						</td>
+					</tr>
+			
+			</tbody>
+			</table>
+		</div>
+		
 	    
     </div>
 		<script src="registerSW.js"></script>
