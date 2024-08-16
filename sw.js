@@ -1,6 +1,6 @@
 'use strict';
 // Cache store name to save static resources
-const CACHE_STATIC = 'static-cache-v3.6';
+const CACHE_STATIC = 'static-cache-v3.6.1';
 // Minimal set of files to cache to be a PWA
 const FILES_TO_CACHE = [
     './',
@@ -8,6 +8,10 @@ const FILES_TO_CACHE = [
     './img/favicon-512.png',
     './index.html',
     './pwa.json',
+    './style.css',
+    './checklistLogic.js',
+    './installAppBTN.js',
+    './registerSW.js',
 ];
 
 // FUNCS
