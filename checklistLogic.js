@@ -110,8 +110,7 @@ save = function(){
 			
 clearz = function(){
 	// Clears the localstorage data, and reloads the page (the name "clear" couldn't be used)
-	//if (confirm("⚠️ Are you sure? You will lose all the work you've done.")){
-	if (1){
+	if (confirm("⚠️ Are you sure? You will lose all the work you've done.")){
 		localStorage.clear();
 		window.location.reload();
 	}
