@@ -1,37 +1,209 @@
+@font-face {
+  font-family: OpenSans;
+  /* declare weights giving two values to specify a range */
+  font-weight: 400 800;
+  src: url(OpenSans-VariableFont_wdth,wght.ttf);
+}
+
+* {
+  font-family: OpenSans;
+  -webkit-print-color-adjust: exact; 
+
+}
+
 body {
   background-color: white;
-}
+ }
 h1 {
-  color: maroon;
-  margin-left: 20px;
+ font-weight: 620;
+ color:#dca10f;
+ margin-bottom:-0.5em;
 }
-input, button, label {
-	/* margin-left: 20px; */
+h2 {
+ font-weight: 650;
+ font-size: 1.15em;
+ color:#dca10f;
+}
+p, input {
+	font-size:1em;
+ }
+input {
+	margin-left: 0.45em;
 }
 
 ul {
 	
-	margin-top:-1.75em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0em;
+    margin-inline-end: 0em;
+    padding-inline-start: 1.1em;
+}
+ 
+.buttonClass{
+
+	background-color: #dca011;
+	transition: background-color 0.2s linear;
+
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0.35em 0.5em;
+	margin: 0em 0.5em;
+	font-size:1em;
+  
+}
+.buttonClass:hover {
+	background-color: #be8e1d;
+	transition: background-color 0.2s linear;
+
 }
 
+
 /* table */ 
-/* tableWrap tableHeader1 tableHeader2 tableRow tableGroup tableRowIngroup */
+/* formWrap tableHeader1 tableHeader2 tableRow tableGroup tableRowIngroup */
+/* entire form will be max 800px wide */
+.fullPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .tableMain  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
-.tableMain td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tableMain th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tableMain td,th{
+	border-color:black;border-style:solid;border-width:1px; overflow:hidden;padding:1em 1.1em;word-break:normal; font-size:1em;
+}
 .tableMain {text-align:left;vertical-align:top;border-color:inherit;}
-.tableMain .suggestedAction { background:pink;display: none;line-height:2em;padding-left:5px;padding-right:10px;margin-top:10px;}
-.tableMain .suggestedAction:before { content: "❗️ "; }
+.tableCell{
+
+}
+.tableMain .suggestedAction.hide {
+	display: none;
+}
+.tableMain .suggestedAction {
+	background:#fbc6c8;display:inline-block;padding-left:35px;padding-right:10px;padding-top:10px;padding-bottom:10px;margin-top:10px;
+}
+.tableMain .suggestedAction:before { content: "❗️ ";  position:absolute; margin-left:-25px;}
 .tableMain .tableCheck{vertical-align:top;}
-.tableMain .tableHeader1{background-color:grey;}
-.tableMain .tableHeader2{background-color:lightgrey;}
-.tableMain .tableGroup{background-color:whitesmoke;}
-@media screen and (max-width: 767px) {
+.tableMain .tableHeader1{
+	background-color:#dca011;
+	font-weight: bold;
+	color:white; 
+}
+.tableMain .tableHeader2{
+	background-color:#f4c959;	
+	font-weight: bold;
+}
+.tableMain .tableGroup{background-color:#f8d98c;}
+.highlightYellow {
+	background-color:#f8d98c;
+	padding:0.5em;
+}
+.formWrap {width:800px; padding-bottom:1em;}
+.topBanana {width:100px; float: right; margin-top:-30px;}
+.tableGroup{
+	width: 1%;
+    white-space: nowrap;
+}
+.footer{
+	color:darkgrey;
+	margin-top:1em;
+	font-size:0.8em;
+	line-height:1.5em;
+}
+ 
+
+/* Side by side input fields on top (desktop) */ 
+.sideBySide, .sideBySideFlex {
+	display:table;
+	width:100%;
+}
+
+.textInputClassStretch {
+	width:95%;
+}
+
+.textInputClassBig{
+	width:100%;
+	height:12em;
+}
+
+.sideBySideFixedLeft {
+	display:table-cell;
+	width: 0%;
+	text-align:left;
+	height:100%;
+}
+
+.sideBySideExpanding {
+	display:table-cell;
+}
+
+.sideBySideFixedRight {
+	display:table-cell;
+	width: 12em;
+	text-align:right;
+	height:100%;
+}
+
+@media screen and (max-width: 800px) {
 	.tableMain {width: auto !important;}
 	.tableMain col {width: auto !important;}
-	.tableWrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}
+	.formWrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px; width: auto !important;}
+	.topPart, .footer {
+		margin:0.75em;
+	}
+	
+	.tableGroup{
+		text-align:center;
+        writing-mode: tb-rl;
+        transform: rotate(-180deg) ;
+		
+ 	}
+	
+	.buttonClass{
+
+		margin: 0.5em 0.5em;
+	  
+	}	
+	
+	.textInputClassBig{
+		width:98%;
+	}
+	
+	/* Side by side input fields on top (mobile) */ 
+	.sideBySide, .sideBySideFlex {
+		display:table;
+		width:100%;
+	}
+
+	.textInputClassStretch {
+	 
+	}
+
+	.sideBySideFixedLeft {
+		display:table-cell;
+ 		min-width: 3em ;
+		text-align:left;
+		height:100%;
+	}
+
+	.sideBySideExpanding {
+		display:table-cell;
+		width:100%;
+	}
+
+	.sideBySideFixedRight {
+		display:block;
+ 		width: 100%;
+		text-align:left;
+		height:100%;
+		margin-top:-1em;
+	}
+	
+ 
 }
 
 

@@ -23,29 +23,56 @@
     
 </head>
 <body>
-	<h1>Slips Checklist - PWA v3.6</h1>
-    <div>
-		<label for="TextYourname">Your name:</label>
-		<input type="text" id="TextYourname" name="TextYourname"><br><br>	
-		<label for="TextWorkplace">Workplace:</label>
-		<input type="text" id="TextWorkplace" name="TextWorkplace"><br><br>	
+    <div class="fullPage">
+		<div class="formWrap">
+			<div class="topPart">
+				<img src="img/favicon-192.png" alt="Drawing of a banana peel" class="topBanana"></img>
+				<h1>Slips and Trips</h1>
+				<h2>Hazard Spotting Checklist</h2>
+				
+				<p>
+					Use this checklist to identify slip and trip hazards in your workplace and determine the necessary actions. Not all items may be relevant to your specific situation, and there may be additional hazards to consider. You can add these at the end of the checklist. To effectively utilize the checklist, take a walk through your workplace and consult with workers and safety representatives. It’s important to take action promptly upon identifying any hazards.
+				</p>
+				<p>
+					Thank you for not printing and using a digital checklist 💚
+				</p>
+				<p class="highlightYellow">
+					Changes are automatically saved to this device.
+					<button id="installApp" class="buttonClass">Install app</button>					
+					<input type="button" class="buttonClass" value="Print (PDF)" onclick="window.print();" />
+					<input type="button" class="buttonClass" value="Reset" onclick="clearz();" />
+				</p>
+				
+				<div class="sideBySideFlex">
+					<div class="sideBySide">
+						<div class="sideBySideFixedLeft">
+							<p>Name:</p>
+							<p>Place:</p>
+						</div>
+						<div class="sideBySideExpanding">
+							<p><input type="text" class="textInputClassStretch" id="TextYourname" name="TextYourname" placeholder ="Your name" ></p>
+							<p><input type="text" class="textInputClassStretch" id="TextWorkplace" name="TextWorkplace" placeholder ="Workplace being assessed" ></p>
+						</div>
+					</div>
+					<div class="sideBySideFixedRight">
+						<div class="sideBySide">
+							<div class="sideBySideFixedLeft">
+								<p>Date:</p>
+								<p>Zone:</p>
+							</div>
+							<div class="sideBySideExpanding">
+								<p><input type="date" id="TextDate" name="TextDate" size="14"></p>
+								<p><input type="text" class="textInputClass" id="TextZone" name="TextZone" placeholder ="e.g. First floor" size="14"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+ 	
+
+				<br>
+ 
 		
-        <input type="checkbox" id="checkbox-1" name="checkbox-1" />
-		<label for="checkbox-1">Hazard 1</label><br>		
-        <input type="checkbox" id="checkbox-2" name="checkbox-2" />
-		<label for="checkbox-2">Hazard 2</label><br>	
-        <input type="checkbox" id="checkbox-3" name="checkbox-3" />
-		<label for="checkbox-3">Hazard 3</label><br>		
-
-		<br>
-		<!--        <input type="button" value="Save" onclick="save();" />-->
-        <input type="button" value="Clear" onclick="clearz();" />
-
-	    <br><br>
-	    <button id="installApp">Install to device</button>
-		
-
-		<div class="tableWrap">
+			</div>
 			<table class="tableMain">
 				<tbody>
 					<tr>
@@ -58,9 +85,9 @@
 					<tr>
 						<td class="tableCell" colspan="2">
 							<div class="potentialIssue">
-								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud et
+								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud etc. 
 							</div>
-							<div class="suggestedAction" id="suggestedAction1">
+							<div class="suggestedAction hide" id="suggestedAction1">
 								<ul>
 								  <li>Set up a regular work schedule for clearing paths, tackle bus routes first.</li>
 								  <li>Consider cutting back plants and trees that overlap paths.</li>
@@ -90,7 +117,7 @@
 						<td class="tableGroup" rowspan="2">Tiles/flooring</td>
 						<td class="tableCell">
 							<div class="potentialIssue">Are the tiles or flooring becoming unstuck or curling at the edges?</div>
-							<div class="suggestedAction" id="suggestedAction4">Maintenance required – fix down tiles and carpet edges, replace if necessary.</div>
+							<div class="suggestedAction hide" id="suggestedAction4">Maintenance required – fix down tiles and carpet edges, replace if necessary.</div>
 						</td>
 						<td class="tableCheck">
 							<input type="checkbox" id="checkbox4" name="checkbox4" />
@@ -103,7 +130,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="tableCell" colspan="2">Is the anti-slip fl oor coating or grip tape worn smooth or damaged?</td>
+						<td class="tableCell" colspan="2">Is the anti-slip floor coating or grip tape worn smooth or damaged?</td>
 						<td class="tableCheck">
 							<input type="checkbox" id="checkbox6" name="checkbox6" />
 						</td>
@@ -130,6 +157,17 @@
 			
 			</tbody>
 			</table>
+			</br>
+			<hr>
+			<h2>Additional hazards to consider</h2>
+			<p>Add here any additional hazards that are specific to this workplace (create separate checklists for different zones). If there are multiple areas to consider, list the hazards according to them. You can also add suggested actions as needed.</p>
+			<textarea id="TextAdditional" class="textInputClassBig" name="TextAdditional" rows="4" cols="1250" placeholder="Type additional hazards here."></textarea>
+
+			<div class="footer">
+				© 2024 British Safety Council. For personal use only. Includes graphics from Vecteezy. v1.0 🐼</br>
+				Contains public sector information published by the Health and Safety Executive and licensed under the Open Government Licence.
+			</div>
+		<!-- End form wrap --!>
 		</div>
 		
 	    
