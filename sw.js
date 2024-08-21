@@ -1,6 +1,6 @@
 'use strict';
 // Cache store name to save static resources
-const CACHE_STATIC = 'static-cache-v3.6.21';
+const CACHE_STATIC = 'static-cache-v3.6.22;';
 // Minimal set of files to cache to be a PWA
 const FILES_TO_CACHE = [
     './',
