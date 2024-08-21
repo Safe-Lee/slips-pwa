@@ -105,8 +105,8 @@ ul {
 .formWrap {width:800px; padding-bottom:1em;}
 .topBanana {width:100px; float: right; margin-top:-30px;}
 .tableGroup{
-	width: 1%;
-    white-space: nowrap;
+	xwidth: 1%;
+    xwhite-space: nowrap;
 }
 .footer{
 	color:darkgrey;
@@ -162,14 +162,14 @@ ul {
 	
 	
 	.tableMain td,th{
-		border-color:pink;
+		border-color:purple;
 	}	
 
 	.footer div{
 		display:inline;
 	}
 		
-	.xtableGroup{
+	.tableGroup{
 		text-align:center;
         writing-mode: tb-rl;
         transform: rotate(-180deg) ;
