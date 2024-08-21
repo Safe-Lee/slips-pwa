@@ -23,6 +23,7 @@ h2 {
  font-weight: 650;
  font-size: 1.15em;
  color:#dca10f;
+ margin-bottom:-0.5em;
 }
 p, input {
 	font-size:1em;
@@ -113,7 +114,10 @@ ul {
 	font-size:0.8em;
 	line-height:1.5em;
 }
- 
+
+.bottomPart{
+	margin-top:1.5em;
+}
 
 /* Side by side input fields on top (desktop) */ 
 .sideBySide, .sideBySideFlex {
@@ -149,13 +153,23 @@ ul {
 }
 
 @media screen and (max-width: 800px) {
-	.tableMain {width: auto !important;}
+	.tableMain {width: 100%;}
 	.tableMain col {width: auto !important;}
 	.formWrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px; width: auto !important;}
-	.topPart, .footer {
+	.topPart, .bottomPart {
 		margin:0.75em;
 	}
 	
+	
+	.tableMain td,th{
+		border-color:red;border-style:solid;border-width:1px; 
+		font-size:3.55vw;
+	}	
+
+	.footer div{
+		display:inline;
+	}
+		
 	.tableGroup{
 		text-align:center;
         writing-mode: tb-rl;

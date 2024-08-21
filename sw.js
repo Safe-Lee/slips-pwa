@@ -1,10 +1,15 @@
 'use strict';
 // Cache store name to save static resources
-const CACHE_STATIC = 'static-cache-v3.6.22;';
+const CACHE_STATIC = 'static-cache-v3.6.23';
 // Minimal set of files to cache to be a PWA
 const FILES_TO_CACHE = [
     './',
     './favicon.ico',
+    './favicon-16x16.png',
+    './favicon-32x32.png',
+    './mstile-150x150.png',
+    './img/favicon-180.png',
+    './img/favicon-192.png',
     './img/favicon-512.png',
     './index.html',
     './pwa.json',
@@ -12,6 +17,8 @@ const FILES_TO_CACHE = [
     './checklistLogic.js',
     './installAppBTN.js',
     './registerSW.js',
+    './OpenSans-VariableFont_wdth,wght.ttf',
+    './apple-touch-icon.png',
 ];
 
 // FUNCS
