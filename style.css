@@ -156,15 +156,35 @@ ul {
 	background-color:#dca011;
 	font-weight: bold;
 	color:white; 
+
+	z-index:999;	
+	top: 0; /* Needed for sticky header */
 }
 .tableMain .tableHeader2{
 	background-color:#f4c959;	
 	font-weight: bold;
+	
+	z-index:998;
+	top: 3.2em; /* Needed for sticky header */
+}
+.tableMain .tableHeader2 a{
+	font-size:0.75em;
+	font-weight:600;
+	text-decoration: none !important;
+	position:absolute;
+	bottom:1em;
+	right:1em;
+	color:black;
+	opacity:0.5;
+}
+.tableMain .tableHeader1,.tableMain .tableHeader2 {
+	position: sticky;
 }
 .tableMain .tableGroup{
 	background-color:#f8d98c;
 }
 .tableGroup{
+	z-index:998;
 	width: 1%;
     white-space: nowrap;
 }
@@ -190,7 +210,7 @@ ul {
 
 	/* General/Various */
 	.formWrap {
-		overflow-x: auto;
+		/*overflow-x: auto;  Removed because it makes sticky header not work for mobile (not sure what this does) */
 		-webkit-overflow-scrolling: touch;
 		margin: auto 0px; 
 		width: auto !important;
@@ -235,9 +255,7 @@ ul {
 	.tableMain col {
 		width: auto !important;
 	}
-	.tableMain td,th{
-		/* border-color:purple;*/
-	}	
+
 	.tableGroup{
 		text-align:center;
         writing-mode: tb-rl;
