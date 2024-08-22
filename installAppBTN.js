@@ -1,4 +1,5 @@
 let deferredPrompt;
+console.log(`Initialize Install App button.`);
 
 // This code makes sure the "Install App" button only shows if it's not already installed
 // Note: when running locally, this always default to false (ie. the button won't show, regardless)

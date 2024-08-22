@@ -1,3 +1,5 @@
+console.log(`Slips and Trips: page loaded`);
+
 if ('serviceWorker' in navigator) {
 	// Register Service Worker on page load (if not registered before)
 	self.addEventListener('load', async () => {

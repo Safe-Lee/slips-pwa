@@ -1,5 +1,6 @@
 window.onload = function(){
 	// Each section below initializes inputs for each type (sets existing values, if they exist, and adds eventlisteners, mostly for saving)
+	console.log(`Initializing form.`);
 	
 	// INITIALIZE CHECKBOXES
 	var listOfCheckboxes = document.querySelectorAll(`[type*="checkbox"]`);
