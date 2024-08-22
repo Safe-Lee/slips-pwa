@@ -1,35 +1,39 @@
+/* General */ 
 @font-face {
   font-family: OpenSans;
-  /* declare weights giving two values to specify a range */
   font-weight: 400 800;
-  src: url(OpenSans-VariableFont_wdth,wght.ttf);
+  src: url(OpenSans-VariableFont_wdth,wght.ttf); /* Using custom font */
 }
-
 * {
   font-family: OpenSans;
-  -webkit-print-color-adjust: exact; 
-
+  -webkit-print-color-adjust: exact; /* Otherwise Print ignores background colors */
 }
-
-
-/* To prevent font-boosting (made font size uneven in some cells) */
-/* https://stackoverflow.com/questions/13430897/how-to-override-font-boosting-in-mobile-chrome */
-html * {max-height:1000000px;}
-
-
+html * {
+	/* To prevent font-boosting (made font size uneven in some cells) */
+	/* https://stackoverflow.com/questions/13430897/how-to-override-font-boosting-in-mobile-chrome */
+	max-height:1000000px;
+}
 body {
   background-color: white;
  }
+.fullPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Basic */ 
 h1 {
  font-weight: 620;
  color:#dca10f;
- margin-bottom:-0.5em;
+ margin-bottom: 0.25em;
 }
 h2 {
  font-weight: 650;
  font-size: 1.15em;
  color:#dca10f;
- margin-bottom:-0.5em;
+ margin-top:0em;
+ margin-bottom: 0em;
 }
 p, input {
 	font-size:1em;
@@ -37,18 +41,16 @@ p, input {
 input {
 	margin-left: 0.45em;
 }
-
-ul {
-	
+ul {	
     margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0em;
     margin-inline-end: 0em;
     padding-inline-start: 1.1em;
 }
- 
-.buttonClass{
 
+/* Top */ 
+.buttonClass{
 	background-color: #dca011;
 	transition: background-color 0.2s linear;
 
@@ -61,42 +63,68 @@ ul {
 	padding: 0.35em 0.5em;
 	margin: 0em 0.5em;
 	font-size:1em;
-  
 }
 .buttonClass:hover {
 	background-color: #be8e1d;
 	transition: background-color 0.2s linear;
-
 }
+.highlightYellow {
+	background-color:#f8d98c;
+	padding:0.5em;
+	margin-bottom: 1em;
+}
+.topBanana {width:100px; float: right; margin-top:-30px;}
 
-
-/* table */ 
+/* Form */ 
 /* formWrap tableHeader1 tableHeader2 tableRow tableGroup tableRowIngroup */
-/* entire form will be max 800px wide */
-.fullPage {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+/* Form will be max 800px wide */
+.formWrap {
+	width:800px;
+	padding-bottom:1em;
 }
-.tableMain  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
-.tableMain td,th,tr{
-	border-color:black;border-style:solid;border-width:1px; overflow:hidden;padding:1em 1.1em;word-break:normal; font-size:1em;
+.tableMain  {
+	border-collapse:collapse;
+	border-spacing:0;
+	margin:0px auto;
+	text-align:left;
+	vertical-align:top;
+	border-color:inherit;
 }
-.tableMain {text-align:left;vertical-align:top;border-color:inherit;}
-.tableCell{
+.tableMain td, .tableMain th, .tableMain tr{
+	border-color:black;
+	border-style:solid;
+	border-width:1px; 
+	overflow:hidden;
+	padding:1em 1.1em;
+	word-break:normal; 
 	font-size:1em;
+}
+.tableCell {
+	font-size:1em;
+}
+.tableMain .suggestedAction {
+	background:#fbc6c8;
+	display:inline-block;
+	padding-left:35px;
+	padding-right:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-top:10px;
 }
 .tableMain .suggestedAction.hide {
 	display: none;
 }
-.tableMain .suggestedAction {
-	background:#fbc6c8;display:inline-block;padding-left:35px;padding-right:10px;padding-top:10px;padding-bottom:10px;margin-top:10px;
+.tableMain .suggestedAction:before {
+	content: "❗️ ";  
+	position:absolute; 
+	margin-left:-25px;
 }
 .tableMain .potentialIssue {
 	font-size:1em !important;
 }
-.tableMain .suggestedAction:before { content: "❗️ ";  position:absolute; margin-left:-25px;}
-.tableMain .tableCheck{vertical-align:top;}
+.tableMain .tableCheck{
+	vertical-align:top;
+}
 .tableMain .tableHeader1{
 	background-color:#dca011;
 	font-weight: bold;
@@ -106,16 +134,17 @@ ul {
 	background-color:#f4c959;	
 	font-weight: bold;
 }
-.tableMain .tableGroup{background-color:#f8d98c;}
-.highlightYellow {
+.tableMain .tableGroup{
 	background-color:#f8d98c;
-	padding:0.5em;
 }
-.formWrap {width:800px; padding-bottom:1em;}
-.topBanana {width:100px; float: right; margin-top:-30px;}
 .tableGroup{
-	xwidth: 1%;
-    xwhite-space: nowrap;
+	width: 1%;
+    white-space: nowrap;
+}
+
+/* Bottom */ 
+.bottomPart{
+	margin-top:1.5em;
 }
 .footer{
 	color:darkgrey;
@@ -124,9 +153,6 @@ ul {
 	line-height:1.5em;
 }
 
-.bottomPart{
-	margin-top:1.5em;
-}
 
 /* Side by side input fields on top (desktop) */ 
 .sideBySide, .sideBySideFlex {
@@ -150,6 +176,10 @@ ul {
 	height:100%;
 }
 
+.sideBySideFixedLeft p {
+	margin-bottom:1.25em;
+}
+
 .sideBySideExpanding {
 	display:table-cell;
 }
@@ -166,7 +196,8 @@ ul {
 	.tableMain col {width: auto !important;}
 	.formWrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px; width: auto !important;}
 	.topPart, .bottomPart {
-		margin:0.75em;
+		margin-right:0.75em;
+		margin-left:0.75em;
 	}
 	
 	
