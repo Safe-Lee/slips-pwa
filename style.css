@@ -94,7 +94,6 @@ ul {
 }
 .tableMain .potentialIssue {
 	font-size:1em !important;
-	color: green !important;
 }
 .tableMain .suggestedAction:before { content: "❗️ ";  position:absolute; margin-left:-25px;}
 .tableMain .tableCheck{vertical-align:top;}
