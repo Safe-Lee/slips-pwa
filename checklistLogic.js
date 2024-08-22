@@ -102,6 +102,22 @@ window.onload = function(){
 			console.log(bigTextArea.id,bigTextArea.value);						
 		}
 	})
+
+
+	// Adds Go To Top links to all header2 (except first)
+	var listOfHeader2s = document.getElementsByClassName("tableHeader2");
+	Array.from(listOfHeader2s).slice(1).forEach( el => {
+		console.log(el);	
+		let a = document.createElement("a");
+		a.addEventListener( 'click', (event) => {
+			scrollToTop();
+			return false;
+		} )
+		a.append("Go to top ▲");
+		el.append(a);		
+	
+	});
+	
 	
 }
 
@@ -137,5 +153,7 @@ grabNumberFromEventID = function(evento){
 	tempIDnumber = evento.id.match(/\d+$/);
 	return parseInt(tempIDnumber, 10);	
 }
-
+scrollToTop = function (){
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
 // End

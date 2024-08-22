@@ -176,6 +176,9 @@ ul {
 	right:1em;
 	color:black;
 	opacity:0.5;
+
+	cursor: pointer;
+	
 }
 .tableMain .tableHeader1,.tableMain .tableHeader2 {
 	position: sticky;
