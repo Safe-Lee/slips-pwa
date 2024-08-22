@@ -11,6 +11,12 @@
 
 }
 
+
+/* To prevent font-boosting (made font size uneven in some cells) */
+/* https://stackoverflow.com/questions/13430897/how-to-override-font-boosting-in-mobile-chrome */
+html * {max-height:1000000px;}
+
+
 body {
   background-color: white;
  }
