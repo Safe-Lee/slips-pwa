@@ -151,6 +151,8 @@ ul {
 }
 .tableMain .tableCheck{
 	vertical-align:top;
+	
+	  filter:   hue-rotate(166deg) saturate(70%);
 }
 .tableMain .tableHeader1{
 	background-color:#dca011;
@@ -161,8 +163,11 @@ ul {
 	top: 0; /* Needed for sticky header */
 }
 .tableMain .tableHeader2{
-	background-color:#f4c959;	
+	background:linear-gradient(180deg, #f4c959, #f4c959, #f4c959, #f0c659);
+	
 	font-weight: bold;
+	
+	border-width:0em !important;
 	
 	z-index:998;
 	top: 3.2em; /* Needed for sticky header */
