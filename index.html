@@ -44,6 +44,8 @@
 					<input type="button" class="buttonClass" value="Reset" onclick="clearz();" />
 				</p>
 				
+				<a href="#" class="scrollLink" onclick="scrollToBottom();return false;">Go to bottom ▼</a> 
+				
 				<div class="sideBySideFlex">
 					<div class="sideBySide">
 						<div class="sideBySideFixedLeft">
@@ -71,12 +73,18 @@
 			</div>
 			<table class="tableMain">
 				<!-- Comments added for structure (since colspans make it confusing) -->
+				<!-- Every checkbox needs a correspondent suggestedAction, with the same *unique* number appended at the end. -->
+				<!-- Note checkbox has 2 variables to update: id and name (they should be the same); Although name isn't used, best to have it -->
+				<!-- Numbering doesn't need to be sequential. However, only have numbers at the end of string (ie. don't do "3b", do "3001" instead)  -->
+				<!-- Every group needs a rowspan with how many rows are within it -->
+				<!-- The first td of a row that is NOT within a group must have colspan = 2 -->
 				<tbody>
+					<!-- h1: TOP HEADER  -->
 					<tr>
-						<!-- Topmost header -->
 						<th class="tableHeader1" colspan="2">Potential issue(s)</th>
 						<th class="tableHeader1">Yes?</th>
-					</tr>				
+					</tr>	
+					<!-- h2: OUTDOOR AREAS -->
 					<tr>
 						<td class="tableHeader2" colspan="3">Outdoor areas</td>
 					</tr>
@@ -99,369 +107,612 @@
 					<tr>
 						<td class="tableCell" colspan="2">
 							<div class="potentialIssue">
-								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud etc? 
+								Are paths prone to ice build-up during winter months?
 							</div>
-							<div class="suggestedAction hide" id="suggestedAction1">
+							<div class="suggestedAction hide" id="suggestedAction2">
 								<ul>
-								  <li>Set up a regular work schedule for clearing paths, tackle bus routes first.</li>
-								  <li>Consider cutting back plants and trees that overlap paths.</li>
+								  <li>Consider alternative, safer routes.</li>
+								  <li>Monitor weather conditions, put a winter procedure in place, eg gritting.</li>
 								</ul>
 							</div>
 						</td>
 						<td class="tableCheck">
-							<input type="checkbox" id="checkbox1" name="checkbox1" />
+							<input type="checkbox" id="checkbox2" name="checkbox2" />
 						</td>
 					</tr>
 					<tr>
 						<td class="tableCell" colspan="2">
 							<div class="potentialIssue">
-								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud etc? 
+								Are there any changes in level on the path that are not easy to see, eg small slopes?
 							</div>
-							<div class="suggestedAction hide" id="suggestedAction1">
-								<ul>
-								  <li>Set up a regular work schedule for clearing paths, tackle bus routes first.</li>
-								  <li>Consider cutting back plants and trees that overlap paths.</li>
-								</ul>
+							<div class="suggestedAction hide" id="suggestedAction2001">
+								Highlight hazard – improve lighting, apply contrasting eye-catching colour to slope (eg non-slip paint, flush-fitting bolt-on material).
 							</div>
 						</td>
 						<td class="tableCheck">
-							<input type="checkbox" id="checkbox1" name="checkbox1" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">
-							<div class="potentialIssue">
-								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud etc? 
-							</div>
-							<div class="suggestedAction hide" id="suggestedAction1">
-								<ul>
-								  <li>Set up a regular work schedule for clearing paths, tackle bus routes first.</li>
-								  <li>Consider cutting back plants and trees that overlap paths.</li>
-								</ul>
-							</div>
-						</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox1" name="checkbox1" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">
-							<div class="potentialIssue">
-								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud etc? 
-							</div>
-							<div class="suggestedAction hide" id="suggestedAction1">
-								<ul>
-								  <li>Set up a regular work schedule for clearing paths, tackle bus routes first.</li>
-								  <li>Consider cutting back plants and trees that overlap paths.</li>
-								</ul>
-							</div>
-						</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox1" name="checkbox1" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">
-							<div class="potentialIssue">
-								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud etc? 
-							</div>
-							<div class="suggestedAction hide" id="suggestedAction1">
-								<ul>
-								  <li>Set up a regular work schedule for clearing paths, tackle bus routes first.</li>
-								  <li>Consider cutting back plants and trees that overlap paths.</li>
-								</ul>
-							</div>
-						</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox1" name="checkbox1" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">
-							<div class="potentialIssue">
-								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud etc? 
-							</div>
-							<div class="suggestedAction hide" id="suggestedAction1">
-								<ul>
-								  <li>Set up a regular work schedule for clearing paths, tackle bus routes first.</li>
-								  <li>Consider cutting back plants and trees that overlap paths.</li>
-								</ul>
-							</div>
-						</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox1" name="checkbox1" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">
-							<div class="potentialIssue">
-								Can anything be found on the paths, steps and fire escapes that could cause slips, eg build-up of leaves, wet grass, moss, mud etc? 
-							</div>
-							<div class="suggestedAction hide" id="suggestedAction1">
-								<ul>
-								  <li>Set up a regular work schedule for clearing paths, tackle bus routes first.</li>
-								  <li>Consider cutting back plants and trees that overlap paths.</li>
-								</ul>
-							</div>
-						</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox1" name="checkbox1" />
+							<input type="checkbox" id="checkbox2001" name="checkbox2001" />
 						</td>
 					</tr>					
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are there holes, potholes, or uneven paving on footpaths?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction3">
+								<ul>
+								  <li>Barrier off area as a temporary solution, ensure barriers cannot be easily moved.</li>
+								  <li>Highlight hazard, eg improve lighting, use eyecatching colour on defective area as a temporary solution.</li>
+								  <li>Maintenance required – fill in holes, re-lay paving, replace broken paving stones.</li>
+								</ul>
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox3" name="checkbox3" />
+						</td>
+					</tr>					
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are fire escapes slippery when wet?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction4">
+								Improve grip – consider applying slip-resistant coating/strips or bolt-on slip-resistant material (caution – do not create a trip hazard).     
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox4" name="checkbox4" />
+						</td>
+					</tr>	
+					<!-- h2: DOORWAY -->
+					<tr>
+						<td class="tableHeader2" colspan="3">Doorway</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Is the floor between the building threshold (entrance) and the entrance matting slippery when wet? 
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction5">
+								Improve grip – consider extending mat or exterior paving, applying slip-resistant coating/strips or changing to more slip-resistant material.
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox5" name="checkbox5" />
+						</td>
+					</tr>
+					<!-- h2: ENTRANCES -->
+					<tr>
+						<td class="tableHeader2" colspan="3">Entrances</td>
+					</tr>
+					<!-- Group: Wet weather -->
+					<tr>
+						<td class="tableGroup" rowspan="2">Wet weather</td>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Is there water on the floor from rain etc?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction6">
+								<ul>
+								  <li>Stop water entering building – construct canopies over entrances, improve external drainage, keep doors closed when you can.</li>
+								  <li>Prevent water spreading – fit large, absorbent entrance mats to dry shoes.</li>
+								  <li>Remove water quickly – review cleaning system, introduce dry mopping, consider introducing heaters/underfloor heating to speed up drying time.</li>
+								</ul>
+							</div>	
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox6" name="checkbox6" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Is it making the floor slippery?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction7">
+								Improve grip – consider fitting slip-resistant flooring.
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox7" name="checkbox7" />
+						</td>
+					</tr>
+					<!-- End Group: Wet weather -->
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are there any trip hazards in the area, eg trailing cables, deliveries, mats with curled up edges, or other objects?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction8">
+								Housekeeping needed – tidy away cables, provide safe delivery storage area, clear away boxes and equipment, fix down mat edges or replace if necessary.
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox8" name="checkbox8" />
+						</td>
+					</tr>					
+					<!-- h2: CORRIDORS AND OFFICES -->
 					<tr>
 						<td class="tableHeader2" colspan="3">Corridors and offices</td>
 					</tr>
 					<tr>
-						<td class="tableGroup" rowspan="2">Tiles/flooring</td>
-						<td class="tableCell">
+						<td class="tableCell" colspan="2">
 							<div class="potentialIssue">
-								Are there holes?
+								Are there any subtle changes in floor level, eg slopes, small steps, abrupt changes from one flooring material to another? 
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction9">
+								Highlight hazard – improve lighting, use eye-catching colour on slope/step, clearly highlight change from one flooring material to another.
 							</div>
 						</td>
 						<td class="tableCheck">
-							<input type="checkbox" id="checkbox4" name="checkbox4" />
+							<input type="checkbox" id="checkbox9" name="checkbox9" />
 						</td>
 					</tr>
 					<tr>
-						<td class="tableCell">
+						<td class="tableCell" colspan="2">
 							<div class="potentialIssue">
-								Are the tiles or flooring becoming unstuck or curling at the edges?
+								Are the floors smooth in areas where contamination can be found on the floor (eg liquids, food and food wrappers, dusts, polythene, condensation etc.)?
 							</div>
-							<div class="suggestedAction hide" id="suggestedAction5">
-								Maintenance required – fix down tiles and carpet edges, replace if necessary.
-							</div>				
-						</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox5" name="checkbox5" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Is the anti-slip floor coating or grip tape worn smooth or damaged?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox6" name="checkbox6" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableGroup" rowspan="3">Lighting</td>
-						<td class="tableCell">Added on top here to test font size thing</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox77" name="checkbox77" />
-						</td>						
-					</tr>
-					<tr>
-						<td class="tableCell">Are light levels too low to see the floor surface clearly?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox7" name="checkbox7" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell">Is light reflecting on the smooth flooring creating glare?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox8" name="checkbox8" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>
-					
-					<tr>
-						<td class="tableHeader2" colspan="3">Corridors and offices 2</td>
-					</tr>
-					<tr>
-						<td class="tableGroup" rowspan="2">Tiles/flooring</td>
-						<td class="tableCell">
-							<div class="potentialIssue">
-								Are there holes?
+							<div class="suggestedAction hide" id="suggestedAction10">
+								<ul>
+									<li>Stop contamination from getting onto floor – provide bins for litter, fix leaks, fit lids on containers, close doors leading from working areas.</li>
+									<li>Prevent spreading – drip trays beneath plants/machines/water coolers.</li>
+									<li>Remove contamination quickly – review cleaning system, spot clean spills, dry mop large wet areas, vacuum/brush up dry materials.</li>
+								</ul>
 							</div>
 						</td>
 						<td class="tableCheck">
-							<input type="checkbox" id="checkbox4" name="checkbox4" />
+							<input type="checkbox" id="checkbox10" name="checkbox10" />
 						</td>
-					</tr>
+					</tr>					
+					<!-- Group: Tiles / flooring -->
 					<tr>
+						<td class="tableGroup" rowspan="2">Tiles / flooring</td>
 						<td class="tableCell">
 							<div class="potentialIssue">
 								Are the tiles or flooring becoming unstuck or curling at the edges?
 							</div>
-							<div class="suggestedAction hide" id="suggestedAction5">
-								Maintenance required – fix down tiles and carpet edges, replace if necessary.
-							</div>				
+							<div class="suggestedAction hide" id="suggestedAction11">
+								  Maintenance required – fix down tiles and carpet edges, replace if necessary.
+							</div>	
 						</td>
 						<td class="tableCheck">
-							<input type="checkbox" id="checkbox5" name="checkbox5" />
-						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Is the anti-slip floor coating or grip tape worn smooth or damaged?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox6" name="checkbox6" />
+							<input type="checkbox" id="checkbox11" name="checkbox11" />
 						</td>
 					</tr>
 					<tr>
-						<td class="tableGroup" rowspan="3">Lighting</td>
-						<td class="tableCell">Added on top here to test font size thing</td>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Are there holes?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction12">
+								Fill in holes, replace cracked tiles.
+							</div>
+						</td>
 						<td class="tableCheck">
-							<input type="checkbox" id="checkbox77" name="checkbox77" />
-						</td>						
-					</tr>
-					<tr>
-						<td class="tableCell">Are light levels too low to see the floor surface clearly?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox7" name="checkbox7" />
+							<input type="checkbox" id="checkbox12" name="checkbox12" />
 						</td>
 					</tr>
+					<!-- End Group: Tiles / flooring -->					
 					<tr>
-						<td class="tableCell">Is light reflecting on the smooth flooring creating glare?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox8" name="checkbox8" />
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Is the anti-slip floor coating or grip tape worn smooth or damaged?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction13">
+								Maintenance required – replace damaged and worn coatings. Consider changing flooring..
+							</div>
 						</td>
-					</tr>
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
 						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>	
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>	
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>	
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>	
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>	
-					<tr>
-						<td class="tableGroup" rowspan="3">Lighting</td>
-						<td class="tableCell">Added on top here to test font size thing</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox77" name="checkbox77" />
-						</td>						
-					</tr>
-					<tr>
-						<td class="tableCell">Are light levels too low to see the floor surface clearly?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox7" name="checkbox7" />
+							<input type="checkbox" id="checkbox13" name="checkbox13" />
 						</td>
 					</tr>
 					<tr>
-						<td class="tableCell">Is light reflecting on the smooth flooring creating glare?</td>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are there any trip hazards around workstations or in corridors and walkways, eg trailing cables, boxes, deliveries, equipment, other objects?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction14">
+								Housekeeping needed – keep walkways clear, tidy away or use cable covers, provide additional storage, clear away boxes and equipment.
+							</div>
+						</td>
 						<td class="tableCheck">
-							<input type="checkbox" id="checkbox8" name="checkbox8" />
+							<input type="checkbox" id="checkbox14" name="checkbox14" />
+						</td>
+					</tr>					
+					<!-- Group: Lighting -->
+					<tr>
+						<td class="tableGroup" rowspan="2">Lighting</td>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Are light levels too low to see the floor surface clearly?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction15">
+								 Improve lighting – new bulbs, additional lights.
+							</div>	
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox15" name="checkbox15" />
 						</td>
 					</tr>
 					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Is light reflecting on the smooth flooring creating glare?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction16">
+								<ul>
+									<li>Improve lighting – re-angle lights, install blinds or anti-glare grills or glazing films.</li>
+									<li>Consider removing floor surface shine.</li>
+								</ul>
+							</div>
 						</td>
-					</tr>	
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
 						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>	
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>	
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
-						</td>
-					</tr>	
-					<tr>
-						<td class="tableCell" colspan="2">Some other thing?</td>
-						<td class="tableCheck">
-							<input type="checkbox" id="checkbox9" name="checkbox9" />
+							<input type="checkbox" id="checkbox16" name="checkbox16" />
 						</td>
 					</tr>
+					<!-- End Group: Lighting -->					
+					<!-- h2: STAIRS AND RAMPS -->
+					<tr>
+						<td class="tableHeader2" colspan="3">Stairs and ramps</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are step nosings (edge of step) hard to see, rounded, damaged or slippery?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction17">
+								<ul>
+								  <li>Check lighting is sufficient to see step edges clearly.</li>
+								  <li>Highlight the very edge of the step with a nosing that has a high visibility, square edge and non-slip finish.</li>
+								  <li>For difficult to replace round-edged nosing, ensure non-slip edging wraps right around the edge of the nosing.</li>
+								</ul>
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox17" name="checkbox17" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are handrails available, easy to reach and useable?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction18">
+								<ul>
+								  <li>Provide a handrail on at least one side of the stairs; if flight of stairs is wider than 1 m, provide handrails on both sides and a third, middle handrail if 2 m or wider.</li>
+								  <li>Handrail heights should be between 900 mm and 1000 mm and be parallel to the pitch line (slope) of the flight of stairs. On landings where the handrail provides guarding the height should be 1100 mm.</li>
+								  <li>Recommendations for handrail shape, diameter and distance from wall can be found in the Building Regulations and British Standards.</li>
+								</ul>
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox18" name="checkbox18" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Is the height (rise) of the steps or depth of tread (going) inconsistent throughout the flight?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction19">
+								<ul>
+								  <li>Highlight the problem, eg with warning notice.</li>
+								  <li>Correct the rise/going of the stairs so they are all of equal height.</li>
+								</ul>
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox19" name="checkbox19" />
+						</td>
+					</tr>					
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are the stair treads slippery?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction20">
+								<ul>
+								  <li>Thoroughly clean on a regular basis to remove contaminants.</li>
+								  <li>Replace stair covering with one with better slip resistance.</li>
+								</ul>     
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox20" name="checkbox20" />
+						</td>
+					</tr>	
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are any ramps or slopes in or around the workplace difficult to see?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction21">
+								<ul>
+								  <li>Highlight ramp with contrasting colour and check lighting levels.</li>
+								  <li>Improve grip – consider fitting slip-resistant flooring.</li>
+								  <li>As with flights of stairs, consider providing handrailsc.</li>
+								</ul>     
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox21" name="checkbox21" />
+						</td>
+					</tr>					
+					<!-- h2: WORK AREAS AND WORK PLATFORMS... -->
+					<tr>
+						<td class="tableHeader2" colspan="3">Work areas and work platforms (eg kitchens, warehouses, storerooms)</td>
+					</tr>				
+					<!-- Group: Contamination -->
+					<tr>
+						<td class="tableGroup" rowspan="4">Contamination</td>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								As part of the work process, is contamination (fluids, solids, dust, debris etc) getting onto the floor, and making it slippery?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction22">
+								Stop contamination from getting onto floor – change system of work, improve work area layout, provide bins, dust extraction, lids on containers, reduce quantity of product in containers, fix leaking machinery.
+							</div>	
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox22" name="checkbox22" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								People – spillages, overfilling containers, clearing waste off work surfaces onto the floor, discarding debris onto the floor.
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction23">
+								Prevent contamination spreading – use drip trays, screens to stop splashes, good floor drainage, highlipped sinks, bunding around machines.
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox23" name="checkbox23" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Machines – leaks, overspray, spills, by-product.
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction24">
+								Remove contamination quickly – spot clean spills, dry mop large wet areas, vacuum/brush up dry materials.
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox24" name="checkbox24" />
+						</td>
+					</tr>					
+					<tr>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Process – overspills, leaks, by-product
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction25">
+								Improve grip – consider slip-resistant flooring; provide slip-resistant footwear.
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox25" name="checkbox25" />
+						</td>
+					</tr>
+					<!-- End Group: Contamination -->					
+					<!-- Group: Condensation -->
+					<tr>
+						<td class="tableGroup" rowspan="3">Condensation</td>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Is condensation forming on the floor?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction26">
+								Improve ventilation – use extraction.
+							</div>	
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox26" name="checkbox26" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Is condensation forming on overhead pipework and dripping onto the floor.
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction27">
+								Insulate overhead pipework.
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox27" name="checkbox27" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Is the floor slippery?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction28">
+								Improve grip – consider slip-resistant flooring; provide slip-resistant footwear.
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox28" name="checkbox28" />
+						</td>
+					</tr>
+					<!-- End Group: Condensation -->
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Is poor drainage causing a pooling of fluids on the floor?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction29">
+								Improve floor drainage
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox29" name="checkbox29" />
+						</td>
+					</tr>
+					<!-- Group: Cold store -->
+					<tr>
+						<td class="tableGroup" rowspan="2">Cold store</td>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Is there ice build-up on the floor of the cold store?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction30">
+								<ul>
+								  <li>Remove ice.</li>
+								  <li>Door maintenance – check door closes and seals properly – replace seals, fix door and frame.</li>
+								</ul>  
+							</div>	
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox30" name="checkbox30" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Is the floor slippery?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction31">
+								<ul>
+								  <li>Prevent humidity, eg fit automatic doors, curtains, humidity controls.</li>
+								  <li>Consider supplying slip-resistant footwear.</li>
+								</ul>  
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox31" name="checkbox31" />
+						</td>
+					</tr>
+					<!-- End Group: Cold store -->
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are designated walkways unusable or partially blocked?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction32">
+								<ul>
+								  <li>Create a clear and even walkway through the workplace.</li>
+								  <li>Housekeeping needed – tidy away cables, provide additional storage, clear away clutter, boxes and equipment, safely store pallets.</li>
+								</ul>
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox32" name="checkbox32" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are walkways uneven, do they have holes or missing tiles?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction33">
+								<ul>
+								  <li>Barrier off area as a temporary solution, ensure barriers cannot be easily moved.</li>
+								  <li>Highlight hazard, eg improve lighting, use eye-catching colour on defective area as a temporary solution.</li>
+								  <li>Maintenance required – fill in holes, relay/replace defective flooring.</li>
+								</ul>
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox33" name="checkbox33" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are there any raised carpet edges or holes?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction34">
+								<ul>
+								  <li>Firmly stick down raised or loose edges.</li>
+								  <li>Maintenance required – replace all or damaged section of carpet.</li>
+								</ul>
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox34" name="checkbox34" />
+						</td>
+					</tr>					
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are the tiles or flooring becoming unstuck or curling at the edges?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction35">
+								<ul>
+								  <li>Firmly stick down loose tiles and raised edges.</li>
+								  <li>Maintenance required – replace all or damaged section of flooring</li>
+								</ul>     
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox35" name="checkbox35" />
+						</td>
+					</tr>	
+					<tr>
+						<td class="tableCell" colspan="2">
+							<div class="potentialIssue">
+								Are there any trip hazards around workstations, eg trailing cables, boxes, deliveries or other objects?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction36">
+								<ul>
+								  <li>Encourage a ‘see it, sort it’ mentality among staff.</li>
+								  <li>Housekeeping needed – keep walkways clear, tidy away or use cable covers, provide additional storage, clear away boxes and equipment.</li>
+								</ul>     
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox36" name="checkbox36" />
+						</td>
+					</tr>
+					<!-- Group:Lighting -->
+					<tr>
+						<td class="tableGroup" rowspan="2">Lighting</td>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Are light levels too low to see clearly?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction37">
+								Improve lighting – new bulbs, re-angle, additional lights, install antiglare grills. 
+							</div>	
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox37" name="checkbox37" />
+						</td>
+					</tr>
+					<tr>
+						<td class="tableCell">
+							<div class="potentialIssue">
+								Is light bouncing off the flooring creating glare?
+							</div>
+							<div class="suggestedAction hide" id="suggestedAction38">
+								Stop glare – consider removing floor surface shine.
+							</div>
+						</td>
+						<td class="tableCheck">
+							<input type="checkbox" id="checkbox38" name="checkbox38" />
+						</td>
+					</tr>
+					<!-- End Group: Cold store -->
+
+
+
+
+
 					
-			
 			</tbody>
 			</table>
 			<div class="bottomPart">
- 				<h2>Additional hazards to consider</h2>
+				<a name="bottomAnchor"></a>
+				<a href="#" class="scrollLink" onclick="scrollToTop();return false;">Go to top ▲</a> 				
+ 				<h2>Additional hazards to consider</h2>		
 				<p>Add here any additional hazards that are specific to this workplace (create separate checklists for different zones). If there are multiple areas to consider, list the hazards according to them. You can also add suggested actions as needed.</p>
 				<textarea id="TextAdditional" class="textInputClassBig" name="TextAdditional" rows="4" cols="1250" placeholder="Type additional hazards here."></textarea>
 				<div class="footer">
-					<div>© 2024 British Safety Council. For personal use only. Includes graphics from Vecteezy. v0.1 🐼</div>
+					<div>© 2024 British Safety Council. For personal use only. Includes graphics from Vecteezy. v0.2 🐼</div>
 					<div>Contains public sector information published by the Health and Safety Executive and licensed under the Open Government Licence.</div>
 				</div>
 			</div>

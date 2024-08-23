@@ -156,4 +156,12 @@ grabNumberFromEventID = function(evento){
 scrollToTop = function (){
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
+scrollToBottom = function (){
+	var body = document.body,
+		html = document.documentElement;
+
+	var height = Math.max( body.scrollHeight, body.offsetHeight, 
+						   html.clientHeight, html.scrollHeight, html.offsetHeight );	
+  window.scrollTo({top:height, behavior: 'smooth'});
+}
 // End

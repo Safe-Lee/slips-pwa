@@ -167,18 +167,22 @@ ul {
 	z-index:998;
 	top: 3.2em; /* Needed for sticky header */
 }
-.tableMain .tableHeader2 a{
+.tableMain .tableHeader2 a, .scrollLink, .scrollLink2{
 	font-size:0.75em;
 	font-weight:600;
 	text-decoration: none !important;
-	position:absolute;
-	bottom:1em;
-	right:1em;
 	color:black;
 	opacity:0.5;
 
-	cursor: pointer;
-	
+	cursor: pointer;	
+}
+.tableMain .tableHeader2 a{
+	position:absolute;
+	bottom:1em;
+	right:1em;
+}
+.scrollLink {
+	float:right;
 }
 .tableMain .tableHeader1,.tableMain .tableHeader2 {
 	position: sticky;
