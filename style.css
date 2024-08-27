@@ -81,7 +81,7 @@ ul {
 	width:100%;
 }
 .textInputClassStretch {
-	width:95%;
+	width:85%;
 }
 .sideBySideFixedLeft {
 	display:table-cell;
@@ -270,8 +270,15 @@ ul {
 
 	.tableGroup{
 		text-align:center;
-        writing-mode: tb-rl;
-        transform: rotate(-180deg) ;		
+
+		writing-mode: vertical-rl;
+		-moz-transform: scale(-1, -1);
+		-webkit-transform: scale(-1, -1);
+		-o-transform: scale(-1, -1);
+		-ms-transform: scale(-1, -1);
+		transform: scale(-1, -1);
+		text-orientation: mixed;
+		
  	}
 	
 	/* Bottom */
