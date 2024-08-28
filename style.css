@@ -192,10 +192,11 @@ ul {
 .tableMain .tableHeader1,.tableMain .tableHeader2 {
 	position: sticky;
 }
-.tableMain .tableGroup{
+.tableMain .tableGroup, .tableGroupDiv {
 	background-color:#f8d98c;
 }
-.tableGroup{
+
+.tableGroup {
 	z-index:998;
 	width: 1%;
     white-space: nowrap;
@@ -268,7 +269,7 @@ ul {
 		width: auto !important;
 	}
 
-	.tableGroup{
+	.tableGroup, .tableGroupDiv{
 		text-align:center;
 
 		writing-mode: vertical-rl;
