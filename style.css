@@ -196,6 +196,15 @@ ul {
 	background-color:#f8d98c;
 }
 
+.tableGroupNew {
+	background-color:#f8d98c;
+	
+		z-index:998;
+	width: 1%;
+    white-space: nowrap;
+
+}
+
 .tableGroup {
 	z-index:998;
 	width: 1%;
