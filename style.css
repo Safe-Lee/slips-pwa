@@ -196,11 +196,13 @@ ul {
 	background-color:#f8d98c;
 }
 
-
 .tableGroup {
 	z-index:998;
 	width: 1%;
     white-space: nowrap;
+	
+	width: 1em;
+	margin: auto; 
 }
 
 /* Bottom */ 
