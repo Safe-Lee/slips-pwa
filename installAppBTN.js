@@ -3,9 +3,11 @@ console.log(`Initialize Install App button.`);
 
 // This code makes sure the "Install App" button only shows if it's not already installed
 // Note: when running locally, this always default to false (ie. the button won't show, regardless)
+// Note: there is an installedApp fake button that shows whenever the other one is hidden
 
 // First, hide the install button (DF)
 var installButton = document.getElementById('installApp');
+var installedApp = document.getElementById('installedApp');
 installButton.style.display = 'none';
 	
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -19,6 +21,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 	// Show the install button
 	var installButton = document.getElementById('installApp');
 	installButton.style.display = 'inline-block';
+	installedApp.style.display = 'none';
 
 	// What happens when it is clicked: (not fully sure what is done here, but seems to work)
 	const installApp = document.getElementById('installApp');

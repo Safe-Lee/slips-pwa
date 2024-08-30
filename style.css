@@ -64,6 +64,14 @@ ul {
 	margin: 0em 0.6em;
 	font-size:1em;
 }
+.installedApp{
+	cursor: default;
+	
+}
+.installedApp:hover{
+	background-color: #dca011 !important;
+	
+}
 .buttonClass:hover {
 	background-color: #be8e1d;
 	transition: background-color 0.2s linear;
