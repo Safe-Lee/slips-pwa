@@ -74,6 +74,49 @@ ul {
 	margin-bottom: 1em;
 }
 .topBanana {width:100px; float: right; margin-top:-30px;}
+.topButtons{
+	float:right;
+	padding-top:1.5em;
+}
+
+/* Collapsible */
+.collapsible {
+  background-color: #f8d98c;
+  cursor: pointer;
+  padding: 0.5em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  font-weight:600;
+}
+
+.active, .collapsible:hover {
+ xbackground-color: #e1c274;
+}
+
+.collapsible:before {
+  content: '\002B';
+  color: black;
+  font-weight: 600;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.active:before {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 1em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  xbackground-color: #f1f1f1;
+  border:0.5px solid #8d763b;
+ 
+}
 
 /* Input fields on top (desktop) */ 
 .sideBySide, .sideBySideFlex {
@@ -172,7 +215,7 @@ ul {
 	z-index:998;
 	top: 3.2em; /* Needed for sticky header */
 }
-.tableMain .tableHeader2 a, .scrollLink, .scrollLink2{
+.tableMain .tableHeader2 a, .scrollLink{
 	font-size:0.75em;
 	font-weight:600;
 	text-decoration: none !important;
@@ -185,6 +228,10 @@ ul {
 	position:absolute;
 	bottom:1em;
 	right:1em;
+}
+.tableHeader2sub {
+	margin-left:1em;
+	font-weight:normal;
 }
 .scrollLink {
 	float:right;
@@ -218,6 +265,8 @@ ul {
 	margin-top:1em;
 	font-size:0.8em;
 	line-height:1.5em;
+	
+	display: inline-block;
 }
 
 
@@ -239,6 +288,10 @@ ul {
 	/* Top */
 	.buttonClass{
 		margin: 0.5em 0.5em;
+	}
+
+	.topButtons{
+		padding-top:0em;
 	}
 	
 	/* Input fields on top (mobile) */ 	
@@ -270,6 +323,11 @@ ul {
 	}
 	.tableMain col {
 		width: auto !important;
+	}
+
+	.tableHeader2sub {
+		display:inline-block;
+		margin-left:0em ;
 	}
 
 	.tableGroupDiv{

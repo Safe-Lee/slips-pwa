@@ -30,20 +30,32 @@
 				<img src="img/favicon-192.png" alt="Drawing of a banana peel" class="topBanana"></img>
 				<h1>Slips and Trips</h1>
 				<h2>Hazard Spotting Checklist</h2>
-				
 				<p>
 					Use this checklist to identify slip and trip hazards in your workplace and determine the necessary actions. Not all items may be relevant to your specific situation, and there may be additional hazards to consider. You can add these at the end of the checklist. To effectively utilize the checklist, take a walk through your workplace and consult with workers and safety representatives. Keep in mind that this is intended as a hazard spotting aid, not to be solely relied upon as a solution. <b>Be sure to take action promptly upon identifying any hazards.</b>
 				</p>
-				<p>
-					Thank you for using a digital checklist instead of printing 💚
-				</p>
-				<p class="highlightYellow">
-					Changes are automatically saved to this device.
-					<button id="installApp" class="buttonClass">Install app</button>					
-					<input type="button" class="buttonClass" value="Print (PDF)" onclick="window.print();" />
-					<input type="button" class="buttonClass" value="Reset" onclick="clearz();" />
-				</p>
-				
+				<div id="actionDiv">
+					<span style="float:left;">
+						<p>
+							Thank you for using a digital checklist instead of printing 💚</br>Once you are done, be sure to export your work to PDF.
+						</p>
+					</span>
+					<span class="topButtons">
+						<button id="installApp" class="buttonClass">Install app</button>
+						<input type="button" class="buttonClass" value="Export (PDF)" onclick="window.print();" />
+						<input type="button" class="buttonClass" value="Reset" onclick="clearz();" />
+					</span>
+				</div>
+				<button class="collapsible">Instructions</button>
+				<div class="content">
+					<p>
+					<ul>
+					  <li>This checklist works offline. Changes are automatically saved to this device.</br><em>Note that data is stored in your browser's cache, which might get cleared by other processes. So we recommend exporting to PDF once you are done.</em></li></li>
+					  <li>To export, use the print dialog to save as PDF.</li>
+					  <li>The checklist can also be installed as an app, for easy access. <em>On iOS 16.4+, install via the Share menu.</em></li>
+					</ul>
+					</p>
+				</div>
+				</br>
 				<a href="#" class="scrollLink" onclick="scrollToBottom();return false;">Go to bottom ▼</a> 
 				
 				<div class="sideBySideFlex">
@@ -440,7 +452,7 @@
 					</tr>					
 					<!-- h2: WORK AREAS AND WORK PLATFORMS... -->
 					<tr>
-						<td class="tableHeader2" colspan="3">Work areas and work platforms</br><font style="font-weight:normal;">(eg kitchens, warehouses, storerooms)</font></td>
+						<td class="tableHeader2" colspan="3">Work areas and work platforms<span class="tableHeader2sub">(eg kitchens, warehouses, storerooms)</span></td>
 					</tr>				
 					<!-- Group: Contamination -->
 					<tr>
@@ -928,7 +940,7 @@
 				<p>Add here any additional hazards that are specific to this workplace (create separate checklists for different zones). If there are multiple areas to consider, list the hazards according to them. You can also add suggested actions as needed.</p>
 				<textarea id="TextAdditional" class="textInputClassBig" name="TextAdditional" rows="4" cols="1250" placeholder="Type additional hazards here."></textarea>
 				<div class="footer">
-					<div>© 2024 British Safety Council. Includes graphics from Vecteezy. v1.23 🐼</div>
+					<div>© 2024 British Safety Council. Includes graphics from Vecteezy. v0.1 🐼</div>
 					<div>Contains public sector information published by the Health and Safety Executive and licensed under the Open Government Licence.</div>
 				</div>
 			</div>

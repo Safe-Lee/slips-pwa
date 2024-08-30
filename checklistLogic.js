@@ -118,7 +118,36 @@ window.onload = function(){
 	
 	});
 	
+	// Collapsible logic
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.maxHeight){
+		  content.style.maxHeight = null;
+		} else {
+		  content.style.maxHeight = content.scrollHeight + "px";
+		} 
+	  });
+	}
 	
+	// Clone the action div from top at the bottom
+	// Get the element
+	var elem = document.querySelector('#actionDiv');
+
+	// Create a copy of it
+	var clone = elem.cloneNode(true);
+
+	// Update the ID and add a class
+	clone.id = 'actionDivClone';
+
+	// Inject it into the DOM
+	var placeToInsert = document.querySelector('#TextAdditional');
+	placeToInsert.after(clone);
+
 }
 
 save = function(){
